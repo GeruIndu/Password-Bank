@@ -8,14 +8,14 @@ function addCard(websiteName, userName, password) {
     div.innerHTML = `<div class="website">${websiteName}</div>
                      <div class="user">${userName}</div>
                      <div class="pass">${password}</div>
-                     <button class="del" data-key="${websiteName}">Delete</button>`; // Add data-key for the website name
+                     <button class="del" data-key="${websiteName}">Delete</button>`; 
     container.append(div);
 }
 
 // Function to delete an item from local storage and update the UI
 function deleteItem(key) {
-    localStorage.removeItem(key); // Remove the item from local storage
-    location.reload(); // Reload the page to update the list
+    localStorage.removeItem(key); 
+    location.reload();
 }
 
 // Form submission to save data in local storage
@@ -26,19 +26,20 @@ document.querySelector(".form").addEventListener('submit', (e) => {
     e.preventDefault();
 
     let data = {
-        user: user_name.value,
-        pass: password.value
+        user: user_name.value.trim(),
+        pass: password.value.trim()
     };
 
-    localStorage.setItem(`${web_name.value}`, JSON.stringify(data));
+    localStorage.setItem(`${web_name.value.trim()}`, JSON.stringify(data));
     location.reload();
 });
 
 // Event Delegation for Delete Buttons
 container.addEventListener('click', (e) => {
+    console.log(e.target.classList);
     if (e.target.classList.contains('del')) {
-        const key = e.target.getAttribute('data-key'); // Get the website name (key) from the button
-        deleteItem(key); // Call the delete function
+        const key = e.target.getAttribute('data-key'); 
+        deleteItem(key); 
     }
 });
 
