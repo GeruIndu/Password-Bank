@@ -15,17 +15,20 @@
         <div class="getData">
             <form action="" class="form">
                 <div class="input-area">
-                    <div class="data">
-                        <label for="web-name">Website Name :</label>
-                        <input type="text" name="web-name" class="input web-name">
+                    <div>
+                        <div class="data">
+                            <label for="web-name">Website Name :</label>
+                            <input type="text" name="web-name" class="input web-name" required>
+                        </div>
+                        <div class="Error">Website Name already exist</div>
                     </div>
                     <div class="data">
                         <label for="user-name">User Name :</label>
-                        <input type="text" name="user-name" class="input user-name">
+                        <input type="text" name="user-name" class="input user-name" required>
                     </div>
                     <div class="data">
                         <label for="password">Password :</label>
-                        <input type="text" name="password" class="input password">
+                        <input type="text" name="password" class="input password" required>
                     </div>
                 </div>
                 <button type="submit" class="save">Save</button>

@@ -42,6 +42,13 @@ body{
     background-color: rgb(39, 39, 39);
 }
 
+.Error{
+    display: none;
+    color: red;
+    padding-top: 10px;
+    padding-left: 85px;
+}
+
 .getData label{
     font-size: 16px;
     font-weight: 700;
@@ -88,6 +95,12 @@ body{
     cursor: pointer;
 }
 
+@media (max-width: 1290px) {
+    .Error{
+        padding-left: 0;
+    }
+}
+
 @media (max-width: 740px) {
     .input-area{
         flex-direction: column;
@@ -107,5 +120,6 @@ body{
     .setData > *{
         padding: 10px;
     }
-      
+    
+    
 }
