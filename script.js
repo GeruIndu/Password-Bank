@@ -103,7 +103,7 @@ container.addEventListener('click', (e) => {
 // Load cards on page load
 window.addEventListener('load', () => {
     for (let i = 0; i < localStorage.length; i++) {
-        let key = localStorage.key(i);
+        let key = localStorage.key(i);32
         let data = JSON.parse(localStorage.getItem(key));
         addCard(key, data.user, data.pass);
     }
