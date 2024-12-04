@@ -42,7 +42,7 @@ body{
     background-color: rgb(39, 39, 39);
 }
 
-.Error{
+.Error, .Error1{
     display: none;
     color: red;
     padding-top: 10px;
@@ -88,12 +88,36 @@ body{
     margin: 10px;
 }
 
+.edit-user, .edit-pass{
+    display: none;
+}
+
 .del{
     padding: 5px 15px;
     background-color: rgb(87, 87, 87);
     border-radius: 20px;
     cursor: pointer;
 }
+
+.edit{
+    padding: 5px 15px;
+    background-color: rgb(87, 87, 87);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.edit-save{
+    padding: 5px 15px;
+    background-color: rgb(87, 87, 87);
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+[contenteditable] {
+    background: rgba(189, 189, 189, 0.5);
+    color: rgb(0, 0, 0);
+  }
 
 @media (max-width: 1290px) {
     .Error{
