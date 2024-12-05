@@ -6,14 +6,17 @@ function addCard(websiteName, userName, password) {
     div.setAttribute('class', 'card');
 
     div.innerHTML = `   <div class="website">${websiteName}</div>
+                        <div class="underline1"></div>
                         <div class="userData">
                             <div class="user">${userName}</div>
                             <input type="text" value="${userName}" class="input edit-user">
                         </div>
+                        <div class="underline1"></div>
                         <div class="password">
                             <div class="pass">${password}</div>
                             <input type="text" value="${password}" class="input edit-pass">
                         </div>
+                        <div class="underline1"></div>
                         <div class="btns">
                             <button class="del" data-key="${websiteName}">Delete</button>
                             <button class="edit" data-key="${websiteName}">Edit</button>
