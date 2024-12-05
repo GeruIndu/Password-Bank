@@ -27,10 +27,16 @@ body{
     margin-bottom: 20px;
 }
 
+.underline{
+    height: 1px;
+    background-color: rgb(56, 56, 56);
+}
+
 .input-area{
     display: flex;
     justify-content: center;
     gap: 35px;
+    margin-top: 20px;
 }
 
 .input{
@@ -82,7 +88,7 @@ body{
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    background-color: rgb(75, 75, 75);
+    background-color: rgb(30, 30, 30);
     border-radius: 5px;
     font-size: 20px;
     margin: 10px;
@@ -136,14 +142,29 @@ body{
         flex-wrap: wrap;
         gap: 20px;
     }
-    
+
     .setData {
         max-height: 300px;
     }
 
     .setData > *{
         padding: 10px;
+    } 
+}
+
+@media (max-width: 400px) {
+    .card{
+        flex-direction: column;
+        align-items: flex-start;
+        /* flex-wrap: wrap; */
+        gap: 20px;
     }
     
+    .card > div{
+        font-size: 30px;
+    }
     
+    .del, .edit, .edit-save{
+        padding: 10px 20px;
+    }
 }
